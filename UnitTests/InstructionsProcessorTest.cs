@@ -22,7 +22,7 @@ namespace UnitTests
         {
             var exception = Assert.Throws<ArgumentException>(() => _instructionsProcessor.Process(new Queue<Instruction>(new[] {
                 new Instruction("apPly", 2), new Instruction("apply", 3) }), 1));
-            Assert.IsTrue(exception.Message.Contains(ErrorCodes.DIVIDE_BY_ZERO.ToString()));
+            Assert.IsTrue(exception.Message.Contains(ErrorCodes.MULTIPLE_APPLY_OPERATION.ToString()));
         }
 
         [Test]
